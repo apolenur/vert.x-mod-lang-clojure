@@ -1,6 +1,6 @@
 # Clojure support for Vert.x 2.0
 
-This is a port of git://github.com/orb/vert.x.git to make it run on Vert.x
+This is a port of https://github.com/orb/vert.x to make it run on Vert.x
 2.0. It is an early prototype work, but it does allow running sample Clojure
 verticles.
 
