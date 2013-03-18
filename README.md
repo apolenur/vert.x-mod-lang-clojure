@@ -1,24 +1,26 @@
 # Clojure support for Vert.x 2.0
 
 This is a port of git://github.com/orb/vert.x.git to make it run on Vert.x
-2.0
-
-This is early prototpe work, but it does allow running sample Clojure
+2.0. It is an early prototype work, but it does allow running sample Clojure
 verticles.
 
-Build using 
+How to try
 
-gradle install
+1.Build
 
-Add following 2 lines to $VERTX_HOME/conf/langs.properties 
+	gradle install
 
-clojure=com.polenur~vertx-lang-clojure~0.1.0-SNAPSHOT:org.vertx.java.platform.impl.ClojureVerticleFactory
+2.Add following 2 lines to $VERTX_HOME/conf/langs.properties 
 
-.clj=clojure
+	clojure=com.polenur~vertx-lang-clojure~0.1.0-SNAPSHOT:org.vertx.java.platform.impl.ClojureVerticleFactory
 
-Cd to examples and run
+	.clj=clojure
 
-vertx run echo/echo-server.clj
+3.Run echo example
+
+	cd to examples and run
+
+	vertx run echo/echo-server.clj
 
 
 
