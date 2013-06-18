@@ -39,6 +39,11 @@ public class ClojureVerticle
 		log.info("Starting clojure verticle: " + scriptName);
 
 		//tell RT to use cl as classloader, otherwise it will use Thread cl
+        // call RT.load() to avoid NPE during on Clojure 1.5.x
+        // see  http://dev.clojure.org/jira/browse/CLJ-1172
+        //http://stackoverflow.com/questions/15207596/npe-in-clojure-lang-compiler-when-trying-to-load-a-resource
+
+        RT.load("clojure/core");
 		
 		clojure.lang.Var.pushThreadBindings(clojure.lang.RT.map( clojure.lang.Compiler.LOADER, cl) );
 
