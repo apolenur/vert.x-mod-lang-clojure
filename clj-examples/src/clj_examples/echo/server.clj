@@ -16,7 +16,7 @@
 (def netServer 
   (vcore/sock-listen vcore/vertx "localhost" 1234 pumpHandler))
 
-(vcore/net-server-stop netServer)
+;(vcore/net-server-stop netServer)
 
 
 
